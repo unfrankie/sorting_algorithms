@@ -26,7 +26,7 @@ void insertion_sort_list(listint_t **list)
 			mem->next->prev = mem;
 
 			if (mem->prev != NULL)
-				temp->prev->next = temp;
+				mem->prev->next = mem;
 			else
 				*list = mem;
 
