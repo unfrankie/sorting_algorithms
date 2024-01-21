@@ -42,7 +42,7 @@ int lomuto(int *arr, int start, int end, size_t size)
 			}
 		}
 	}
-	if (i + 1 != high)
+	if (i + 1 != end)
 	{
 		swap(&arr[i + 1], &arr[end]);
 		print_array(arr, size);
