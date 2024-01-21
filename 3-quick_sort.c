@@ -23,7 +23,7 @@ void quick_sort(int *array, size_t size)
   * @size: elements number in array
   */
 
-void lomuto(int *arr, int start, int end, size_t size)
+int lomuto(int *arr, int start, int end, size_t size)
 {
 	int pivot, i, j;
 
