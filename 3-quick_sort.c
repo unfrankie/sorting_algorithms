@@ -25,7 +25,7 @@ void quick_sort(int *array, size_t size)
 
 int lomuto(int *arr, int start, int end, size_t size)
 {
-	int pivot, i, j;
+	int pivot, index, i, j;
 
 	if (start < end)
 	{
@@ -42,7 +42,10 @@ int lomuto(int *arr, int start, int end, size_t size)
 		}
 		swap(&arr[i + 1], &arr[end]);
 		print_array(arr, size);
-		return (i + 1);
+		index = i + 1;
+		lomuto(arr, start, index - 1, size);
+		lomuto(arr, index + 1, end, size);
+		return (index);
 	}
 	return (end);
 }
