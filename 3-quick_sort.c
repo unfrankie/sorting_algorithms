@@ -42,9 +42,9 @@ void lomuto(int *arr, int start, int end, size_t size)
 		}
 		swap(&arr[i + 1], &arr[end]);
 		print_array(arr, size);
-		lomuto(arr, start, i, size);
-		lomuto(arr, i + 2, end, size);
+		return (i + 1);
 	}
+	return end;
 }
 
 /**
@@ -58,7 +58,7 @@ void lomuto(int *arr, int start, int end, size_t size)
 void recursive_q_s(int *arr, int start, int end, size_t size)
 {
 	int pivot;
-	
+
 	if (start < end)
 	{
 		pivot = lomuto(arr, start, end, size);
