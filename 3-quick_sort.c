@@ -21,6 +21,7 @@ void quick_sort(int *array, size_t size)
   * @start: start index of partition
   * @end: end index of partition
   * @size: elements number in array
+  * Return: partition index
   */
 
 int lomuto(int *arr, int start, int end, size_t size)
@@ -52,7 +53,7 @@ int lomuto(int *arr, int start, int end, size_t size)
 void recursive_q_s(int *arr, int start, int end, size_t size)
 {
 	int pivot;
-	
+
 	if (start < end)
 	{
 		pivot = lomuto(arr, start, end, size);
