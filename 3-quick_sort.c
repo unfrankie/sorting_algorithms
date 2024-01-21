@@ -28,7 +28,7 @@ int lomuto(int *arr, int start, int end, size_t size)
 {
 	int *pivot, i, j;
 
-	pivot = arr[end];
+	pivot = &arr[end];
 	i = start - 1;
 	for (j = start; j <= end - 1; j++)
 	{
