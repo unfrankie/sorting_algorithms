@@ -30,17 +30,23 @@ int lomuto(int *arr, int start, int end, size_t size)
 
 	pivot = arr[end];
 	i = start - 1;
-	for (j = start; j < end; j++)
+	for (j = start; j <= end - 1; j++)
 	{
 		if (arr[j] < pivot)
 		{
 			i++;
-			swap(&arr[i], &arr[j]);
-			print_array(arr, size);
+			if (i != j)
+			{
+				swap(&arr[i], &arr[j]);
+				print_array(arr, size);
+			}
 		}
 	}
-	swap(&arr[i + 1], &arr[end]);
-	print_array(arr, size);
+	if (i + 1 != high)
+	{
+		swap(&arr[i + 1], &arr[end]);
+		print_array(arr, size);
+	}
 	return (i + 1);
 }
 
