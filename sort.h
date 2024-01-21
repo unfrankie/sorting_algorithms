@@ -22,7 +22,7 @@ typedef struct listint_s
 
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
-void lomuto(int *arr, int start, int end, size_t size);
+int lomuto(int *arr, int start, int end, size_t size);
 void recursive_q_s(int *arr, int start, int end, size_t size);
 void swap(int *a, int *b);
 
