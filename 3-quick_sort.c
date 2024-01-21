@@ -44,7 +44,7 @@ void lomuto(int *arr, int start, int end, size_t size)
 		print_array(arr, size);
 		return (i + 1);
 	}
-	return end;
+	return (end);
 }
 
 /**
