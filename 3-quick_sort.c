@@ -30,6 +30,7 @@ int lomuto(int *arr, int start, int end, size_t size)
 
 	for (j = start; j < end; j++)
 	{
+		pivot = array[high];
 		if (arr[j] < pivot)
 		{
 			i++;
